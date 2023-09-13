@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <header id="main-header" class="bg-success text-white p-3 mb-2">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 id="header-title">Task Manager App
+          <i class="fa fa-pencil" style="float:right"></i>
+        </h1>
+      </div>
+    </div>
+  </header>
+  <div class="card">
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <input type="text"
+               class="form-control"
+               id="inputField"
+               placeholder="Enter item to do...">
+      </div>
+      <!-- ... -->
+<label for="categorySelect">Category:</label>
+<select id="categorySelect" class="form-select">
+  <option value="">None</option>
+  <option value="work">Work</option>
+  <option value="personal">Personal</option>
+  <option value="shopping">Shopping</option>
+  <!-- Add more categories as needed -->
+</select>
+<!-- ... -->
+<br>
+
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <button class="btn btn-dark" type="button" id="addButton">ADD</button>
+      </div>
+      <br>
+      <div class="input-group mb-3">
+  <input type="text"
+         class="form-control"
+         id="searchField"
+         placeholder="Search tasks...">
+</div>
+      
+      <div class="filters">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" class="form-select">
+              <option value="oldest">Oldest First</option>
+              <option value="newest">Newest First</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="filterSelect">Filter:</label>
+            <select id="filterSelect" class="form-select">
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="active">Active</option>
+            </select>
+          </div>
+          
+        </div>
+      </div>
+      <ul id="todoList"></ul>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
